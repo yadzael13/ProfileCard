@@ -1,0 +1,117 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Staatliches&family=Zilla+Slab&display=swap');
+
+/*
+titulo--
+font-family: 'Secular One', sans-serif;
+
+titulo ---
+font-family: 'Staatliches', cursive;
+
+parrafos --
+font-family: 'Zilla Slab', serif;
+*/
+body {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+body, body * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.background img {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+}
+
+.backblack {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .85);
+  position: fixed;
+  z-index: 1;
+}
+
+/* Seccion de bienvenida */
+.welcome--section {
+  visibility: hidden;
+  position: relative;
+  margin: auto;
+  top: 30px;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  z-index: 5;
+}
+
+.bunsan--header--img {
+  position: relative;
+  width: 12rem;
+  transition: all .5s ease;
+}
+
+.welcome--section img:hover {
+  filter: drop-shadow(0 0 10px hsla(0, 0%, 100%, 0.8))
+}
+
+.welcome--section h1 {
+  font-family: 'Staatliches';
+  font-size: 2.5rem;
+}
+
+.w-s-ul {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.w-s-ul li {
+  display: flex;
+  gap: 30px;
+}
+
+.w-s-ul li .w-s-h2 {
+  font-family: 'Secular One';
+  font-size: 1rem;
+  align-self: center;
+}
+
+.w-s-ul li .w-s-ic {
+  position: relative;
+  width: 2.5rem;
+  filter: invert(100%) drop-shadow(0 0 5px rgba(255, 255, 255, .3));
+}
+
+.welcome--section button {
+  width: 80%;
+  height: 40px;
+  margin-top: 20px;
+  border-style: none;
+  border-radius: 10px 10px 10px 10px;
+  background-color: rgba(34, 116, 47, 0.44);
+  color: white;
+  font-family: 'Staatliches';
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.welcome--section button:hover {
+  box-shadow: 0 0 15px rgba(9, 158, 109, 0.59);
+}

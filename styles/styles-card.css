@@ -1,0 +1,182 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&family=Staatliches&family=Zilla+Slab&display=swap');
+
+/*
+titulo--
+font-family: 'Secular One', sans-serif;
+
+titulo ---
+font-family: 'Staatliches', cursive;
+
+parrafos --
+font-family: 'Zilla Slab', serif;
+*/
+.card--section {
+  position: absolute;
+  top:10%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+  height: auto;
+  z-index: 5;
+  background-color: none;
+}
+
+.card--section::after {
+  content: '';
+  position: fixed;
+  width: 70%;
+  height: 500px;
+  background-color: hsla(0, 0%, 100%, 0.25);
+  top: 25%;
+  display: inline-block;
+  margin: auto;
+  border-radius: 30% 30% 20px 20px;
+  z-index: -1;
+}
+
+.card--user {
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.close {
+  position: relative;
+  width: 2.5rem;
+  align-self: flex-end;
+  filter: invert(100%);
+}
+
+.yadza {
+  align-self: center;
+  z-index: 6;
+}
+
+.yadza img {
+  width: 14rem;
+  height: 15rem;
+  border-radius: 70%;
+  border: double 10px hsla(0, 0%, 98%, 0.41);
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.yadza:after {
+  content: "Ver Info";
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  color: white;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  font-family: 'Secular One';
+  justify-content: center;
+  font-size: 2rem;
+  border-radius: 70%;
+  top: 130px;
+  width: 12.8rem;
+  height: 13.5rem;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  z-index: 7;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.yadza:hover img {
+  border: double 10px hsla(0, 0%, 98%, 0.61);
+}
+
+.yadza:hover:after {
+  opacity: 1;
+}
+
+.card--info {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-items: center;
+  justify-content: center;
+}
+
+.card--info h2, h3, h4 {
+  font-family: 'Secular One';
+  color: white;
+  text-align: center;
+}
+
+.card--info h2 {
+  font-size: 1.5rem;
+  margin: 5px 0 5px 0;
+}
+
+.card--info h4 {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: rgb(8, 191, 141);
+}
+
+/* Informacion Yadza */
+.card--info--user{
+  visibility: hidden;
+  position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: auto;
+  width:80%;
+
+  top:-270px;
+}
+.card--info--user p{
+  margin: auto;
+  text-align: center;
+
+    color:white;
+}
+
+.back, .close{
+
+  width: 3rem;
+  transform:rotate(180deg);
+  cursor:pointer;
+  filter: drop-shadow(0 0 4px  rgba(203, 203, 203, 0.95));
+  transition: all .4s;
+}
+.back:hover, .close:hover{
+  filter: drop-shadow(0 0 10px  rgba(203, 203, 203, 1));
+}
+.close{
+  filter: invert(1);
+}
+/* Iconos de skils && Iconos contacto*/
+.card--info--ic--tec, .card--info--ic--contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ic--tec, .ic--contact {
+  position: relative;
+  width: 3em;
+  height: 3em;
+  filter: drop-shadow(0 0 3px rgb(255, 255, 255));
+  cursor: pointer;
+  transition: filter .3s ease;
+}
+
+.ic--tec:hover, .ic--contact:hover {
+  filter: drop-shadow(0 0 10px rgba(207, 207, 207, 0.85));
+}
+
+/* Toggle info */
+.contact--show--h3 {
+  margin-top: 15px;
+  transition: all .5s;
+}

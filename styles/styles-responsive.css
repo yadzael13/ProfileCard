@@ -1,0 +1,81 @@
+@media only screen and (min-width:500px) and (max-width:709px) {
+  .w-s-ul li h2:nth-of-type(1) {
+    font-size: 1.2rem;
+  }
+
+  .w-s-ul li .w-s-h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (min-width:710px) and (max-width:800px) {
+  .w-s-ul {
+    width: 70%;
+  }
+
+  .w-s-ul li .w-s-h2 {
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (min-width:801px) {
+  .welcome--section {
+    width: 80%;
+    height: 450px;
+    display: grid;
+    grid-template:
+      "a a"auto "b c"auto "b c"auto "b d"auto / 1fr 1fr;
+  }
+
+  .welcome--section h1 {
+    font-size: 3rem;
+    grid-area: a;
+    justify-self: center;
+  }
+
+  .bunsan--header--img {
+    width: 15rem;
+    margin: auto;
+    grid-area: b;
+  }
+
+  .w-s-ul {
+    grid-area: c;
+  }
+
+  .welcome--section button {
+    width: 80%;
+    height: 50px;
+    grid-area: d;
+  }
+}
+
+@media only screen and (min-width:1000px) {
+  .welcome--section {
+    height: 550px;
+  }
+
+  .bunsan--header--img {
+    width: 20rem;
+  }
+
+  .welcome--section h1 {
+    font-size: 4rem;
+  }
+
+  .w-s-ul {
+    width: 100%;
+  }
+
+  .w-s-ul li .w-s-ic {
+    width: 3.5rem;
+  }
+
+  .w-s-ul li .w-s-h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome--section button {
+    margin-top: 10px;
+  }
+}
