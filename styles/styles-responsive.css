@@ -48,6 +48,47 @@
     height: 50px;
     grid-area: d;
   }
+  /* Tarjeta */
+  .card--section::after{
+    margin: auto;
+    right: 150px;
+    width: 65%;
+    height: 450px;
+    border-radius: 90% 90% 20px 20px;
+  }
+  .card--section{
+    display: grid;
+    grid-template: "_ a"auto "b c"auto "b c"auto / 1fr 1fr;
+    grid-gap: 20px;
+    top:270px;
+  }
+  .card--info--user{
+    width: 90%;
+    top:50px;
+  }
+  .close{
+
+  justify-self: flex-end;
+    right: 0;
+    bottom:60px;
+    grid-area: a;
+  }
+  .card--user{
+    grid-area:b;
+
+  }
+  .card--info{
+    grid-area:c;
+  }
+  .card--info--user{
+    grid-area: c;
+  }
+  .card--section::after{
+
+    top:200px;
+
+  }
+
 }
 
 @media only screen and (min-width:1000px) {
@@ -77,5 +118,41 @@
 
   .welcome--section button {
     margin-top: 10px;
+  }
+  .yadza img {
+    width: 16rem;
+    height: 17rem;
+  }
+}
+@media only screen and (min-width:1200px){
+  .card--section{
+    width: 50%;
+
+  }
+  .card--section::after{
+    width: 45%;
+    top:250px;
+    right: 25%;
+  }
+  .yadza img{
+    width: 18rem;
+    height: 19rem;
+  }
+  .yadza{
+    position: relative;
+    left:50px;
+    width: 18rem;
+    height: 19rem;
+  }
+  .yadza::after{
+width: 17rem;
+height: 18rem;
+    position: relative;
+    top:-310px;
+
+  }
+  .card--info h2{
+    font-size: 2.5rem;
+
   }
 }

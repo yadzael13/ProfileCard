@@ -39,10 +39,12 @@ font-family: 'Zilla Slab', serif;
 }
 
 .card--user {
+  width: auto;
+  height: 260px;
   position: relative;
+  margin: auto;
   top: 0;
-  display: flex;
-  flex-direction: column;
+
 }
 
 .close {
@@ -53,13 +55,19 @@ font-family: 'Zilla Slab', serif;
 }
 
 .yadza {
+  width: auto;
+  height: 250px;
   align-self: center;
+  box-sizing: content-box;
   z-index: 6;
 }
 
 .yadza img {
   width: 14rem;
   height: 15rem;
+
+
+  position: relative;
   border-radius: 70%;
   border: double 10px hsla(0, 0%, 98%, 0.41);
   cursor: pointer;
@@ -70,7 +78,7 @@ font-family: 'Zilla Slab', serif;
   content: "Ver Info";
   opacity: 0;
   display: flex;
-  position: fixed;
+  position: relative;
   color: white;
   margin: 10px;
   text-align: center;
@@ -79,7 +87,7 @@ font-family: 'Zilla Slab', serif;
   justify-content: center;
   font-size: 2rem;
   border-radius: 70%;
-  top: 130px;
+top:-240px;
   width: 12.8rem;
   height: 13.5rem;
   background-color: hsla(0, 0%, 0%, 0.8);
@@ -124,7 +132,7 @@ font-family: 'Zilla Slab', serif;
 
 /* Informacion Yadza */
 .card--info--user{
-  visibility: hidden;
+  visibility: visible;
   position: relative;
 display: flex;
 flex-direction: column;
