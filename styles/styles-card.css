@@ -12,8 +12,10 @@ parrafos --
 font-family: 'Zilla Slab', serif;
 */
 .card--section {
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
-  top:10%;
+  top: 10%;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -21,8 +23,16 @@ font-family: 'Zilla Slab', serif;
   justify-content: center;
   align-self: center;
   height: auto;
-  z-index: 5;
+  z-index: -2;
   background-color: none;
+  transition: all .6s ease;
+}
+
+.card--section--on {
+  opacity: 1;
+  visibility: visible;
+  transition: all .6s ease;
+  z-index: 5;
 }
 
 .card--section::after {
@@ -44,7 +54,6 @@ font-family: 'Zilla Slab', serif;
   position: relative;
   margin: auto;
   top: 0;
-
 }
 
 .close {
@@ -65,8 +74,6 @@ font-family: 'Zilla Slab', serif;
 .yadza img {
   width: 14rem;
   height: 15rem;
-
-
   position: relative;
   border-radius: 70%;
   border: double 10px hsla(0, 0%, 98%, 0.41);
@@ -87,7 +94,7 @@ font-family: 'Zilla Slab', serif;
   justify-content: center;
   font-size: 2rem;
   border-radius: 70%;
-top:-240px;
+  top: -240px;
   width: 12.8rem;
   height: 13.5rem;
   background-color: hsla(0, 0%, 0%, 0.8);
@@ -106,11 +113,19 @@ top:-240px;
 
 .card--info {
   visibility: visible;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   gap: 5px;
   justify-items: center;
   justify-content: center;
+  transition: all .6s ease;
+}
+
+.card--info--off {
+  visibility: hidden;
+  opacity: 0;
+  transition: all .6s ease;
 }
 
 .card--info h2, h3, h4 {
@@ -131,38 +146,49 @@ top:-240px;
 }
 
 /* Informacion Yadza */
-.card--info--user{
-  visibility: visible;
+.card--info--user {
+  visibility: hidden;
+  opacity: 0;
   position: relative;
-display: flex;
-flex-direction: column;
-justify-content: center;
-margin: auto;
-  width:80%;
-
-  top:-270px;
-}
-.card--info--user p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: auto;
-  text-align: center;
-
-    color:white;
+  width: 80%;
+  z-index: -2;
+  top: -330px;
+  transition: all .6s ease;
 }
 
-.back, .close{
+.card--info--user--on {
+  visibility: visible;
+  opacity: 1;
+  z-index: 7;
+  transition: all .6s ease;
+}
 
+.card--info--user p {
+  margin: auto;
+  text-align: left;
+  color: white;
+}
+
+.back, .close {
   width: 3rem;
-  transform:rotate(180deg);
-  cursor:pointer;
-  filter: drop-shadow(0 0 4px  rgba(203, 203, 203, 0.95));
+  transform: rotate(180deg);
+  cursor: pointer;
+  filter: drop-shadow(0 0 4px rgba(203, 203, 203, 0.95));
   transition: all .4s;
 }
-.back:hover, .close:hover{
-  filter: drop-shadow(0 0 10px  rgba(203, 203, 203, 1));
+
+.back:hover, .close:hover {
+  filter: drop-shadow(0 0 10px rgba(203, 203, 203, 1));
 }
-.close{
+
+.close {
   filter: invert(1);
 }
+
 /* Iconos de skils && Iconos contacto*/
 .card--info--ic--tec, .card--info--ic--contact {
   width: 100%;
@@ -185,6 +211,9 @@ margin: auto;
 
 /* Toggle info */
 .contact--show--h3 {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 50px;
   margin-top: 15px;
-  transition: all .5s;
+  z-index: 7;
 }
