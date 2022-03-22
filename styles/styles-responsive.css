@@ -1,3 +1,15 @@
+@media only screen and (max-width:500px){
+  .card--info--user p {
+    font-size: .7rem;
+  }
+  .ic--tec{
+    width: 2em;
+    height: 2em;
+  }
+  .back{
+    width: 2rem;
+  }
+}
 @media only screen and (min-width:500px) and (max-width:709px) {
   .w-s-ul li h2:nth-of-type(1) {
     font-size: 1.2rem;
