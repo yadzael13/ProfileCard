@@ -6,6 +6,13 @@
     width: 2em;
     height: 2em;
   }
+  .card--info--user{
+    margin-top: 30px;
+    gap:20px;
+  }
+  .contact--show--h3{
+    font-size: 1.2rem;
+  }
   .back{
     width: 2rem;
   }
